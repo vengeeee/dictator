@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+#text-container {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: text-fall 8s ease-in-out forwards;
+}
+
+@keyframes text-fall {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+#text {
+  font-size: 6em;
+  font-family: "Arial Black", sans-serif; /* Updated */
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
